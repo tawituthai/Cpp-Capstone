@@ -1,6 +1,7 @@
 # CPPND: Capstone
 
 TODO: Explain what we are going to do here.
+<img src="One-North_map.png" width="600" height="600" />
 
 ## Cloning
 
