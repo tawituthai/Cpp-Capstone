@@ -6,9 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 # Add the path of the cmake files to the CMAKE_MODULE_PATH
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
-set(CXX_FLAGS "-Wall")
-set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
-
 project(capstone)
 
 # Set library output path to /lib
@@ -28,7 +25,11 @@ add_subdirectory(thirdparty/pugixml)
 add_subdirectory(thirdparty/googletest)
 
 # Add project executable
-add_executable(capstone src/main.cpp)
+add_executable(capstone 
+    src/main.cpp 
+    src/model.cpp
+    src/render.cpp
+    src/route_model.cpp)
 
 target_link_libraries(capstone
     PRIVATE io2d::io2d
